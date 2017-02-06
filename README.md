@@ -7,8 +7,6 @@
 
 **License :** GPL v3
 
-**More info :** http://b00merang.weebly.com/os-x-mavericks.html
-
 ###Manual installation###
 
 Extract the zip file to the themes directory i.e. `/home/USERNAME/.themes`
