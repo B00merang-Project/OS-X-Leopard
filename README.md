@@ -1,4 +1,4 @@
-# OS-X-Leopard
+# OS X 10.5 'Leopard'
 ### OS X Leopard theme with Aqua elements later abandoned
 
 ![os-x-leopard-aqua](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-06-14-40-56_orig.png)
