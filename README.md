@@ -1,11 +1,15 @@
 # OS-X-Leopard
 ### OS X Leopard theme with Aqua elements later abandoned
 
+![os-x-leopard-aqua](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-06-14-40-56_orig.png)
+
 **Maintainer :** [Elbullazul](https://github.com/Elbullazul)
 
 **Distributor :** [B00merang Project](https://github.com/B00merang-Project)
 
 **License :** GPL v3
+
+More info : http://b00merang.weebly.com/os-x-leopard.html
 
 ###Manual installation###
 
