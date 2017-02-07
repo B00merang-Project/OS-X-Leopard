@@ -2358,10 +2358,6 @@ GtkColorButton.button {
 .header-bar .title {
     font: bold;
     padding: 0 12px;
-    background-image: linear-gradient(to bottom,
-                                      shade(@titlebar_bg_color, 1.0),
-                                      shade(@titlebar_bg_color, 0.95)
-                                      );
 }
 
 .header-bar .title:backdrop {

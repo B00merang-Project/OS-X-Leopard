@@ -876,22 +876,5 @@ style "XFCE"
 	bg_pixmap[NORMAL]	= "Panel/panel.png"
 }
 
-widget "*Panel*"                  style "panel"
-widget "*PanelWidget*"            style "panel"
-widget "*PanelApplet*"            style "panel"
-widget "*fast-user-switch*"       style "panel" # workaround for Fast User Switch applet
-widget "*CPUFreqApplet*"          style "panel" # workaround for CpuFreq Applet
-class "PanelApp*"                 style "panel"
-class "PanelToplevel*"            style "panel"
-#widget_class "*Mail*"            style "panel"
-widget_class "*notif*"            style "panel"
-
-#widget_class "*?anel*utton"      style "panel_task_button" # causing problems to monodevelop
-widget "*task*"                   style "panel_task_button"
-widget "*.tasklist-button"        style "panel_task_button"
-widget "*PanelApplet*TaskTitle*"  style "panel_task_button"
-widget_class "*Xfce*Panel*"	      style "XFCE"
-class "GtkScrollbar"		      style "murrine-scrollbar"
-
 # load panel themes
 include "gnome-panel.rc"
