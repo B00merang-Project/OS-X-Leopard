@@ -1,3 +1,5 @@
+# This project is now unmaintained and will not recieve updates anymore
+
 # OS X 10.5 'Leopard'
 ### OS X Leopard theme with Aqua elements later abandoned
 
@@ -11,7 +13,7 @@
 
 More info : http://b00merang.weebly.com/os-x-leopard.html
 
-###Manual installation###
+### Manual installation ###
 
 Extract the zip file to the themes directory i.e. `/home/USERNAME/.themes`
 
