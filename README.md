@@ -1,9 +1,7 @@
-# This project is now unmaintained and will not recieve updates anymore
-
 # OS X 10.5 'Leopard'
-### OS X Leopard theme with Aqua elements later abandoned
+**OS X Leopard theme with Aqua elements that were abandoned in later OS X releases**
 
-![os-x-leopard-aqua](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-06-14-40-56_orig.png)
+![os-x-leopard-aqua](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-06-14-40-56_1_orig.png)
 
 **Maintainer :** [Elbullazul](https://github.com/Elbullazul)
 
