@@ -1,0 +1,215 @@
+/******************
+ * window actions *
+ ******************/
+
+.titlebar .titlebutton.minimize {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("buttons/minimize-focused-normal.png");
+}
+
+.titlebar .titlebutton.minimize:backdrop {
+    background-image: url("buttons/minimize-unfocused-normal.png");
+    color: transparent;
+}
+
+.titlebar .titlebutton.minimize:hover,
+.titlebar .titlebutton.minimize:active,
+.titlebar .titlebutton.minimize:checked {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("buttons/minimize-focused-active.png");
+}
+
+.titlebar .titlebutton.maximize {
+   color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("buttons/maximize-focused-normal.png");
+}
+
+.titlebar .titlebutton.maximize:backdrop {
+    background-image: url("buttons/maximize-unfocused-normal.png");
+    color: transparent;
+}
+
+
+.titlebar .titlebutton.maximize:hover, 
+.titlebar .titlebutton.maximize:active,
+.titlebar .titlebutton.maximize:checked  {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("buttons/maximize-focused-active.png");
+}
+
+.titlebar .titlebutton.close {
+   color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("buttons/close-focused-normal.png");
+}
+
+.titlebar .titlebutton.close:backdrop {
+    background-image: url("buttons/close-unfocused-normal.png");
+    color: transparent;
+}
+
+
+.titlebar .titlebutton.close:hover,
+.titlebar .titlebutton.close:active,
+.titlebar .titlebutton.close:checked  {
+   color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("buttons/close-focused-active.png");
+}
+
+/*********************************
+ * check and radio (gnome 3.18+) *
+ *********************************/
+ check,
+ check row:selected,
+ check row:selected:focus {
+    -gtk-icon-source: url("assets/checkbox-unchecked.png");
+}
+
+ check:backdrop,
+ check row:selected:backdrop,
+ check row:selected:focus:backdrop,
+ check:disabled,
+ check row:selected:disabled,
+ check row:selected:focus:disabled {
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.png");
+}
+
+ check:active,  check:checked,
+ check row:selected:active,  check row:selected:checked,
+ check row:selected:focus:active,  check row:selected:focus:checked {
+    -gtk-icon-source: url("assets/checkbox-checked.png");
+}
+
+ check:active:backdrop,  check:checked:backdrop,
+ check row:selected:active:backdrop,  check row:selected:checked:backdrop,
+ check row:selected:focus:active:backdrop,  check row:selected:focus:checked:backdrop,
+ check:active:disabled,  check:checked:disabled,
+ check row:selected:active:disabled,  check row:selected:checked:disabled,
+ check row:selected:focus:active:disabled,  check row:selected:focus:checked:disabled {
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive.png");
+}
+
+ check:indeterminate,
+ check row:selected:indeterminate,
+ check row:selected:focus:indeterminate {
+    -gtk-icon-source: url("assets/checkbox-mixed.png");
+}
+
+ check:indeterminate:backdrop,
+ check row:selected:indeterminate:backdrop,
+ check row:selected:focus:indeterminate:backdrop,
+ check:indeterminate:disabled,
+ check row:selected:indeterminate:disabled,
+ check row:selected:focus:indeterminate:disabled {
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive.png");
+}
+
+ radio,
+ radio row:selected,
+ radio row:selected:focus {
+    -gtk-icon-source: url("assets/radio-unselected.png");
+}
+
+ radio:backdrop,
+ radio row:selected:backdrop,
+ radio row:selected:focus:backdrop,
+ radio:disabled,
+ radio row:selected:disabled,
+ radio row:selected:focus:disabled {
+    -gtk-icon-source: url("assets/radio-unselected-insensitive.png");
+}
+
+ radio:active,  radio:checked,
+ radio row:selected:active,  radio row:selected:checked,
+ radio row:selected:focus:active,  radio row:selected:focus:checked {
+    -gtk-icon-source: url("assets/radio-selected.png");
+}
+
+ radio:active:backdrop,  radio:checked:backdrop,
+ radio row:selected:active:backdrop,  radio row:selected:checked:backdrop,
+ radio row:selected:focus:active:backdrop,  radio row:selected:focus:checked:backdrop,
+ radio:active:disabled,  radio:checked:disabled,
+ radio row:selected:active:disabled,  radio row:selected:checked:disabled,
+ radio row:selected:focus:active:disabled,  radio row:selected:focus:checked:disabled {
+    -gtk-icon-source: url("assets/radio-selected-insensitive.png");
+}
+
+ radio:indeterminate,
+ radio row:selected:indeterminate,
+ radio row:selected:focus:indeterminate {
+    -gtk-icon-source: url("assets/radio-mixed.png");
+}
+
+ radio:indeterminate:backdrop,
+ radio row:selected:indeterminate:backdrop,
+ radio row:selected:focus:indeterminate:backdrop,
+ radio:indeterminate:disabled,
+ radio row:selected:indeterminate:disabled,
+ radio row:selected:focus:indeterminate:disabled {
+    -gtk-icon-source: url("assets/radio-mixed-insensitive.png");
+}
+
+/**************************
+ * menuitem check & radio *
+ **************************/
+
+menuitem check {
+	-gtk-icon-source: url("assets/checkbox-unchecked.png");
+	color: @theme_fg_color;
+	-gtk-icon-shadow: none; 
+}
+menuitem check:active, menuitem check:checked {
+	-gtk-icon-source: url("assets/checkbox-checked.png");
+}
+menuitem check:indeterminate {
+	-gtk-icon-source: url("assets/checkbox-mixed.png");
+}
+
+menuitem check:active:hover {
+	color: @theme_selected_fg_color;
+}
+menuitem check:disabled {
+	color: @insensitive_fg_color; 
+}
+
+menuitem radio {
+	-gtk-icon-source: url("assets/radio-unselected.png");
+	color: @theme_fg_color;
+	-gtk-icon-shadow: none; 
+}
+menuitem radio:active, menuitem radio:checked {
+	-gtk-icon-source: url("assets/radio-selected.png");
+}
+menuitem radio:indeterminate {
+	-gtk-icon-source: url("assets/radio-mixed.png");
+}
+menuitem radio:hover {
+	color: @theme_selected_fg_color;
+}
+menuitem radio:disabled {
+	color: @insensitive_fg_color; 
+}
+
