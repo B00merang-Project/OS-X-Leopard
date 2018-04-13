@@ -230,8 +230,8 @@ button {
 button:checked {
     background-image: linear-gradient(to bottom,
                                       #b6c7e0,
-                                      #95b9df 40%,
-                                      #689dd3 41%,
+                                      #95b9df 32%,
+                                      #689dd3 38%,
                                       #bae3f6);
     background-color: shade(@theme_bg_color, 0.8);
     border-color: shade(@theme_bg_color, 0.45);
@@ -2349,7 +2349,7 @@ switch {
     font-weight: bold;
     font-size: 6.5pt;
     outline-offset: -4px;
-    margin: 0;
+    margin: 4px;
     border: 1px solid @borders;
     border-radius: 4px;
     color: alpha(@theme_fg_color, 0.6);
@@ -2707,10 +2707,6 @@ headerbar entry {
     padding: 7.5px 8px;
     border: none;
 }
-
-headerbar switch {
-    margin: 8px;
-}    
 
 /***********
  * toolbar *
