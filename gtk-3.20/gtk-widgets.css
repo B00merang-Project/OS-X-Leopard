@@ -336,13 +336,19 @@ row {
 
 row:selected,
 row:selected:hover,
-row:selected:focus {
+row:selected:focus,
+row:selected:active,
+row:selected:checked,
+row:selected:backdrop {
     border: none;
-    background-color: @theme_selected_bg_color;
     background-color: transparent;
     background-image: linear-gradient(#658af5,
                                       #2460f4);
     color: @theme_selected_fg_color;
+}
+
+row grid {
+	background-color: transparent;
 }
 
 /*******************
