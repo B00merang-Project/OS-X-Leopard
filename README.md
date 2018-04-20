@@ -1,7 +1,7 @@
 # OS X 10.5 'Leopard'
 **OS X Leopard theme with Aqua elements that were abandoned in later OS X releases**
 
-![os-x-leopard-aqua](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2017-02-06-14-40-56_1_orig.png)
+![os-x-leopard-aqua](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/os-x-leopard-2_orig.png)
 
 **Maintainer :** [Elbullazul](https://github.com/Elbullazul)
 
@@ -30,7 +30,7 @@ xfconf-query -c xsettings -p /Net/ThemeName -s "OS X Leopard"
 
 ### Requirements ###
 
-- GTK+ 3.6 or above
+- GTK+ 3.16 or above
 - Murrine and Pixmap theme engines
 
 ### Contribute ###
