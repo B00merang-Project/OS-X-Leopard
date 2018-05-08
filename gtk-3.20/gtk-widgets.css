@@ -1656,6 +1656,7 @@ progressbar progress {
 
 progressbar.vertical progress {
     min-width: 16px;
+    min-height: 0;
     border-color: transparent;
     border-left-width: 0;
     border-right-width: 0;
