@@ -2096,6 +2096,14 @@ combobox separator {
     color: @sidebar_fg_color;
 }
 
+filechooser.csd.background,
+filechooser placessidebar list,
+.nautilus-window.csd.background,
+.nautilus-window placessidebar list {
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
+}
+
 .sidebar row:selected,
 .sidebar row:selected:hover,
 .sidebar row:selected:focus,
@@ -3043,7 +3051,7 @@ toolbar entry:backdrop {
 }
 
 /*leftmost button */
-/*.linked entry:first-child,*/
+.linked entry:first-child,
 .linked button:first-child,
 .linked button:active:first-child,
 .linked button:active:hover:first-child,
@@ -3062,7 +3070,7 @@ toolbar entry:backdrop {
 }
 
 /* rightmost button */
-/*.linked entry:last-child,*/
+.linked entry:last-child,
 .linked button:last-child,
 .linked button:active:last-child,
 .linked button:active:hover:last-child,
@@ -3165,7 +3173,7 @@ toolbar entry:backdrop {
 }
 
 /* top button (vertical) */
-/*.linked.vertical entry:first-child,*/
+.linked.vertical entry:first-child,
 .linked.vertical button:first-child,
 .linked.vertical button:active:first-child,
 .linked.vertical button:active:hover:first-child,
@@ -3178,7 +3186,7 @@ toolbar entry:backdrop {
 }
 
 /* bottom button (vertical) */
-/*.linked.vertical entry:last-child,*/
+.linked.vertical entry:last-child,
 .linked.vertical button:last-child,
 .linked.vertical button:active:last-child,
 .linked.vertical button:active:hover:last-child,
@@ -4209,7 +4217,7 @@ decoration:backdrop {
 }
  */
 messagedialog.csd decoration {
-    border-radius: 0;
+    border-radius: 4px 4px 0 0;
     background-color: @theme_bg_color;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
 }
@@ -4272,7 +4280,7 @@ messagedialog.csd decoration {
                       );
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
-    min-height: 10px;
+    min-height: 20px;
 }
 
 .titlebar:backdrop,
