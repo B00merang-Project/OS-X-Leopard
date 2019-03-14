@@ -2457,7 +2457,7 @@ decoration {
     box-shadow: none; }
 
 window.background.csd.popup {
-  border-radius: 10px; }
+  border-radius: 4px; }
 
 messagedialog {
   border-bottom-left-radius: 4px;
