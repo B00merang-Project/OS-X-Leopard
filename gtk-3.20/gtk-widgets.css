@@ -879,7 +879,7 @@ menubar, .menubar {
   color: @menubar_fg_color; }
   menubar:backdrop, .menubar:backdrop {
     color: @theme_unfocused_fg_color;
-    background-color: @theme_unfocused_bg_color; }
+    background-color: shade(@theme_unfocused_bg_color, 0.95); }
 
 menubar > menuitem, .menubar > menuitem {
   padding: 3px 5px;
@@ -1899,7 +1899,7 @@ toolbar {
   .primary-toolbar:backdrop {
     border-color: @theme_unfocused_bg_color;
     color: @theme_unfocused_fg_color;
-    background-color: @theme_unfocused_bg_color; }
+    background-color: shade(@theme_unfocused_bg_color, 0.95); }
   .primary-toolbar button, .primary-toolbar .raised button {
     padding: 4px 8px;
     border-style: solid;
