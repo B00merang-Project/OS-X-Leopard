@@ -808,7 +808,7 @@ filechooserbutton:drop(active) {
   box-shadow: none;
   border-color: transparent; }
 
-:not(decoration):not(window):drop(active), :not(decoration):not(window):drop(active):focus {
+:not(decoration):not(window):drop(active), :not(decoration):not(window):drop(active):focus, combobox:drop(active) button.combo {
   border-color: #2563AE;
   box-shadow: inset 0 0 0 1px #2563AE;
   caret-color: #2563AE; }
@@ -1657,15 +1657,10 @@ colorchooser #add-color-button {
 
 headerbar, headerbar:not(.titlebar) {
   padding: 4px 8px;
-  border-width: 0;
-  border-style: solid;
-  border-color: mix(shade(#EDEDED, 0.9), #EDEDED, 0.5);
-  border-bottom-width: 1px;
-  box-shadow: 0 1px shade(#EDEDED, 0.9);
+  border: none;
   color: #000000;
   background-color: #EDEDED; }
   headerbar:backdrop, headerbar:not(.titlebar):backdrop {
-    border-color: shade(#EDEDED, 0.9);
     color: #8C8C8C;
     background-color: #EDEDED; }
   .titlebar headerbar, .titlebar headerbar:backdrop, .titlebar headerbar:not(.titlebar), .titlebar headerbar:not(.titlebar):backdrop {
@@ -2114,8 +2109,6 @@ filechooser .sidebar, .nautilus-window .sidebar, .nemo-window .sidebar {
     border: none; }
   filechooser .sidebar separator, filechooser .sidebar separator:backdrop, .nautilus-window .sidebar separator, .nautilus-window .sidebar separator:backdrop, .nemo-window .sidebar separator, .nemo-window .sidebar separator:backdrop {
     background-color: transparent; }
-  paned filechooser .sidebar.left, paned filechooser .sidebar.right, paned filechooser .sidebar.left:dir(rtl), paned filechooser .sidebar:dir(rtl), paned filechooser .sidebar:dir(ltr), paned filechooser .sidebar, paned .nautilus-window .sidebar.left, paned .nautilus-window .sidebar.right, paned .nautilus-window .sidebar.left:dir(rtl), paned .nautilus-window .sidebar:dir(rtl), paned .nautilus-window .sidebar:dir(ltr), paned .nautilus-window .sidebar, paned .nemo-window .sidebar.left, paned .nemo-window .sidebar.right, paned .nemo-window .sidebar.left:dir(rtl), paned .nemo-window .sidebar:dir(rtl), paned .nemo-window .sidebar:dir(ltr), paned .nemo-window .sidebar {
-    border: none; }
 
 .caja-navigation-window .caja-side-pane {
   background-color: #E2E5EC; }
@@ -2152,8 +2145,6 @@ filechooser .sidebar, .nautilus-window .sidebar, .nemo-window .sidebar {
     border: none; }
   .caja-navigation-window .caja-side-pane separator, .caja-navigation-window .caja-side-pane separator:backdrop {
     background-color: transparent; }
-  paned .caja-navigation-window .caja-side-pane.left, paned .caja-navigation-window .caja-side-pane.right, paned .caja-navigation-window .caja-side-pane.left:dir(rtl), paned .caja-navigation-window .caja-side-pane:dir(rtl), paned .caja-navigation-window .caja-side-pane:dir(ltr), paned .caja-navigation-window .caja-side-pane {
-    border: none; }
 
 stacksidebar row {
   padding: 10px 4px; }
@@ -2233,6 +2224,9 @@ searchbar {
   border-style: solid;
   border-color: shade(#EDEDED, 0.9);
   background-color: #EDEDED; }
+
+.nautilus-window .searchbar-container {
+  margin-top: -1px; }
 
 .app-notification {
   border-style: solid;
@@ -2624,11 +2618,15 @@ messagedialog {
   min-height: 30px;
   color: #000000;
   background-color: #E0DEE1;
-  background-image: linear-gradient(to bottom, shade(#E0DEE1, 0.9), shade(#E0DEE1, 0.75)); }
+  background-image: linear-gradient(to bottom, shade(#E0DEE1, 0.9), shade(#E0DEE1, 0.75));
+  border-bottom: 1px solid shade(#E0DEE1, 0.65); }
+  .titlebar headerbar, .titlebar:not(headerbar) headerbar, headerbar.default-decoration headerbar, .csd headerbar.default-decoration headerbar, .default-decoration.titlebar:not(headerbar) headerbar, .csd .default-decoration.titlebar:not(headerbar) headerbar {
+    border-bottom: none; }
   .titlebar:backdrop, .titlebar:not(headerbar):backdrop, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop, .default-decoration.titlebar:not(headerbar):backdrop, .csd .default-decoration.titlebar:not(headerbar):backdrop {
     color: #8C8C8C;
     background-image: linear-gradient(to bottom, shade(#EDEDED, 1.05), shade(#EDEDED, 0.95));
-    background-color: #EDEDED; }
+    background-color: #EDEDED;
+    border-color: shade(#EDEDED, 0.9); }
 
 .caja-desktop, .nemo-desktop.nemo-canvas-item, .nautilus-desktop.nautilus-canvas-item {
   color: #FFFFFF;
