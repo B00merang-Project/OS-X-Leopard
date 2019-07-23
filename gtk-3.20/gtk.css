@@ -2543,25 +2543,27 @@ messagedialog {
     border-bottom-right-radius: 4px;
     box-shadow: 0 1px 2px alpha(black, 0.2); }
   messagedialog .titlebar.horizontal {
-    background-image: none;
     background-color: #EDEDED; }
   messagedialog.csd .dialog-action-area button {
     padding: 10px;
     border-radius: 0;
     border-bottom-style: none;
-    -gtk-outline-radius: 4px; }
+    -gtk-outline-radius: 0; }
     messagedialog.csd .dialog-action-area button:last-child {
       border-right-width: 0;
       border-radius: 0px;
-      border-bottom-right-radius: 4px; }
+      border-bottom-right-radius: 4px;
+      -gtk-outline-radius: 0 0 4px 0; }
     messagedialog.csd .dialog-action-area button:first-child {
       border-left-width: 0;
       border-radius: 0px;
-      border-bottom-left-radius: 4px; }
+      border-bottom-left-radius: 4px;
+      -gtk-outline-radius: 0 0 0 4px; }
     messagedialog.csd .dialog-action-area button:only-child {
       border-radius: 0px;
       border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px; }
+      border-bottom-right-radius: 4px;
+      -gtk-outline-radius: 0 0 0 4px 4px; }
 
 .titlebar {
   border-bottom: none;
@@ -2624,6 +2626,9 @@ messagedialog {
     background-image: linear-gradient(to bottom, shade(#EDEDED, 1.05), shade(#EDEDED, 0.95));
     background-color: #EDEDED;
     border-color: shade(#EDEDED, 0.9); }
+  window.ssd .titlebar, window.ssd .titlebar:not(headerbar), window.ssd headerbar.default-decoration, window.ssd .csd headerbar.default-decoration, window.ssd .default-decoration.titlebar:not(headerbar), window.ssd .csd .default-decoration.titlebar:not(headerbar) {
+    border-bottom: none;
+    min-height: 20px; }
 
 .caja-desktop, .nemo-desktop.nemo-canvas-item, .nautilus-desktop.nautilus-canvas-item {
   color: #FFFFFF;
