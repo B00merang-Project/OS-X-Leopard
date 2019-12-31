@@ -2,19 +2,21 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg3036"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    width="24"
    height="24"
-   sodipodi:docname="window-name-focused.svg">
+   sodipodi:docname="hover.svg">
   <metadata
      id="metadata3042">
     <rdf:RDF>
@@ -28,7 +30,41 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs3040" />
+     id="defs3040">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4136">
+      <stop
+         style="stop-color:#1f63f6;stop-opacity:1"
+         offset="0"
+         id="stop4138" />
+      <stop
+         style="stop-color:#6389f8;stop-opacity:1"
+         offset="1"
+         id="stop4140" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4680"
+       osb:paint="gradient">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4682" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4684" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4136"
+       id="linearGradient4142"
+       x1="12.807175"
+       y1="25.647346"
+       x2="12.778093"
+       y2="0.032996807"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -39,23 +75,23 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1366"
-     inkscape:window-height="650"
+     inkscape:window-height="714"
      id="namedview3038"
      showgrid="false"
-     inkscape:zoom="14.142136"
-     inkscape:cx="4.2062573"
-     inkscape:cy="10.550383"
+     inkscape:zoom="2.3229167"
+     inkscape:cx="4.8391315"
+     inkscape:cy="8.191324"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="26"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3036" />
   <rect
-     style="fill:#808080;fill-opacity:0.72549021000000002;stroke:#808080;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.72549021;stroke-dasharray:none"
-     id="rect2982"
-     width="23.150002"
-     height="22.9"
-     x="0.55000001"
-     y="0.60000002"
-     rx="2"
-     ry="2" />
+     style="fill:url(#linearGradient4142);fill-opacity:1;stroke:#0e50ed;stroke-opacity:1"
+     id="rect4678"
+     width="23.970919"
+     height="23.758787"
+     x="0"
+     y="0.09979143"
+     rx="0"
+     ry="0" />
 </svg>
