@@ -2657,7 +2657,7 @@ messagedialog {
       border-radius: 0px;
       border-bottom-left-radius: 4px;
       border-bottom-right-radius: 4px;
-      -gtk-outline-radius: 0 0 0 4px 4px; }
+      -gtk-outline-radius: 0 0 4px 4px; }
 
 .caja-desktop, .nemo-desktop.nemo-canvas-item, .nautilus-desktop.nautilus-canvas-item {
   color: #FFFFFF;
