@@ -82,9 +82,10 @@ label:selected {
 
 label > selection {
   color: #FFFFFF;
-  background-color: 2563AE; }
+  background-color: #2563AE; }
   label > selection:focus-within {
-    color: 2563AE; }
+    color: #FFFFFF;
+    background-color: #2563AE; }
 
 label:disabled {
   color: #777777; }
@@ -93,7 +94,7 @@ label:disabled {
   > selection label:disabled {
     color: #4e6d92; }
     > selection label:disabled:backdrop {
-      color: #acacac; }
+      color: #6b8ab0; }
 
 label.error {
   color: #CC0000; }
@@ -391,7 +392,7 @@ editablelabel > stack > text > selection {
   background-color: #2563AE; }
   editablelabel > stack > text > selection:focus-within {
     color: #000000;
-    background-color: 2563AE; }
+    background-color: #2563AE; }
 
 button {
   padding: 4px 8px;
@@ -666,7 +667,7 @@ searchbar {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #d5d5d5;
-  background-color: #EDEDED; }
+  background-color: #e1e1e1; }
 
 .nautilus-window .searchbar-container {
   margin-top: -1px; }
@@ -1078,22 +1079,21 @@ menubar, .menubar {
   menubar:backdrop, .menubar:backdrop {
     color: #8C8C8C;
     background-color: #e1e1e1; }
-
-menubar > menuitem, .menubar > menuitem {
-  padding: 3px 5px;
-  border: none;
-  color: #000000;
-  background-color: transparent; }
-  menubar > menuitem:hover, .menubar > menuitem:hover {
-    color: #FFFFFF;
-    background-color: #2563AE;
-    background-image: linear-gradient(to bottom, #3990f9, #1c75e1); }
-  menubar > menuitem:disabled, .menubar > menuitem:disabled {
-    color: #777777;
+  menubar > menuitem, .menubar > menuitem {
+    padding: 3px 5px;
+    border: none;
+    color: #000000;
     background-color: transparent; }
-  menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
-    color: #8C8C8C;
-    background-color: transparent; }
+    menubar > menuitem:hover, .menubar > menuitem:hover {
+      color: #FFFFFF;
+      background-color: #2563AE;
+      background-image: linear-gradient(to bottom, #3990f9, #1c75e1); }
+    menubar > menuitem:disabled, .menubar > menuitem:disabled {
+      color: #777777;
+      background-color: transparent; }
+    menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
+      color: #8C8C8C;
+      background-color: transparent; }
 
 notebook {
   padding: 0; }
@@ -1658,8 +1658,7 @@ window.dialog.print drawing {
 window.dialog.print .dialog-action-box {
   margin: 12px; }
 
-frame,
-.frame {
+frame, .frame {
   border: 1px solid #d5d5d5; }
 
 frame {
@@ -1821,7 +1820,7 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
   color: transparent; }
   columnview row:not(:selected) cell editablelabel.editing text selection:focus-within {
     color: #000000;
-    background-color: 2563AE; }
+    background-color: #2563AE; }
 
 .rich-list > row {
   padding: 8px 12px;
