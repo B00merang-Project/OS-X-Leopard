@@ -1578,75 +1578,51 @@ scale {
       margin-right: -12px; }
 
 progressbar {
-  padding: 0;
-  border: none;
-  color: gray;
-  background-color: transparent; }
-  progressbar progress {
-    border: none;
+  font-size: smaller;
+  color: gray; }
+  progressbar > trough {
     border-radius: 0;
-    box-shadow: 0 -1px #2b5dbe;
-    background-color: #2563AE;
-    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.05), transparent), linear-gradient(to top, #b9edff, #7db8ff 40%, #53a1ff 60%, #bcdaff 80%);
-    background-size: 16px 16px, auto; }
-    progressbar progress:backdrop {
-      background-color: #a6a6a6; }
-  progressbar trough {
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 0;
-    border-color: #a1a1a1;
+    border: 1px solid #a1a1a1;
     border-left-color: #bebebe;
     border-right-color: #bebebe;
     border-bottom-color: #d5d5d5;
     background-color: #bebebe;
     background-image: linear-gradient(to bottom, #FFFFFF 15%, #EDEDED 40%, #FFFFFF 75%);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
-    progressbar trough:backdrop {
+    progressbar > trough:backdrop {
       background-color: #e1e1e1; }
-  progressbar.vertical progress {
-    box-shadow: -1px 0 #2b5dbe;
-    border-left-color: #2b5dbe;
-    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.05), transparent), linear-gradient(to left, #b9edff, #7db8ff 40%, #53a1ff 60%, #bcdaff 80%); }
-    progressbar.vertical progress:backdrop {
+  progressbar > trough > progress {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 -1px #2b5dbe;
+    background-color: #2563AE;
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.05), transparent), linear-gradient(to top, #b9edff, #7db8ff 40%, #53a1ff 60%, #bcdaff 80%);
+    background-size: 16px 16px, auto; }
+    progressbar > trough > progress:backdrop {
       background-color: #a6a6a6; }
-  progressbar.vertical trough {
+  progressbar.vertical > trough {
     border-left-color: #a1a1a1;
     border-top-color: #bebebe;
     border-bottom-color: #bebebe;
     border-right-color: #d5d5d5;
     background-image: linear-gradient(to right, #FFFFFF 15%, #EDEDED 40%, #FFFFFF 75%);
     box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.2); }
-    progressbar.vertical trough:backdrop {
+    progressbar.vertical > trough:backdrop {
       background-color: #e1e1e1; }
-  progressbar.horizontal trough, progressbar.horizontal progress {
+  progressbar.vertical > trough > progress {
+    box-shadow: -1px 0 #2b5dbe;
+    border-left-color: #2b5dbe;
+    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.05), transparent), linear-gradient(to left, #b9edff, #7db8ff 40%, #53a1ff 60%, #bcdaff 80%); }
+    progressbar.vertical > trough > progress:backdrop {
+      background-color: #a6a6a6; }
+  progressbar.horizontal > trough {
+    min-width: 150px; }
+  progressbar.vertical > trough {
+    min-height: 80px; }
+  progressbar.horizontal > trough, progressbar.horizontal > trough > progress {
     min-height: 16px; }
-  progressbar.vertical trough, progressbar.vertical progress {
+  progressbar.vertical > trough, progressbar.vertical > trough > progress {
     min-width: 16px; }
-
-treeview.view.progressbar, treeview.view.progressbar:disabled {
-  color: #FFFFFF;
-  border-radius: 0;
-  background-color: #2563AE; }
-
-treeview.view.progressbar:focus, treeview.view.progressbar:selected:focus, treeview.view.progressbar:focus:selected, treeview.view.progressbar:focus:selected:focus, treeview.view.progressbar:disabled:selected {
-  border-radius: 0;
-  color: #2563AE;
-  background-color: #FFFFFF; }
-
-treeview.view.trough {
-  color: #000000;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 0;
-  border: none; }
-  treeview.view.trough:selected, treeview.view.trough:selected:focus {
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 0;
-    border: none; }
-
-infobar treeview.view trough, row:selected treeview.view trough {
-  background-color: rgba(0, 0, 0, 0.1); }
 
 levelbar trough {
   padding: 1px;
