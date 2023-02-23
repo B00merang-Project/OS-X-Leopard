@@ -1474,107 +1474,111 @@ scale {
   min-height: 10px;
   min-width: 10px;
   padding: 12px; }
-  scale fill, scale trough {
+  scale > trough {
     border: 1px solid #2563AE;
     border-left-color: silver;
     border-right-color: silver;
     border-bottom-color: #cbcbcb;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.15);
-    box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.15);
-    outline-offset: 2px; }
-    scale fill:disabled, scale trough:disabled {
-      background-color: rgba(0, 0, 0, 0.05); }
-      scale fill:disabled:backdrop, scale trough:disabled:backdrop {
+    background-color: rgba(0, 0, 0, 0.175);
+    box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.5); }
+    scale > trough:disabled {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.35); }
+      scale > trough:disabled:backdrop {
         background-color: rgba(0, 0, 0, 0.05); }
-    scale fill:backdrop, scale trough:backdrop {
+    scale > trough:backdrop {
       background-color: rgba(0, 0, 0, 0.1); }
-  scale.vertical fill, scale.vertical trough {
-    border: 1px solid #ababab;
-    border-top-color: silver;
-    border-bottom-color: silver;
-    border-right-color: #cbcbcb;
-    box-shadow: inset 2px 0 2px 0 rgba(0, 0, 0, 0.15); }
-  scale highlight {
+    scale.vertical > trough {
+      border: 1px solid #ababab;
+      border-top-color: silver;
+      border-bottom-color: silver;
+      border-right-color: #cbcbcb;
+      box-shadow: inset 2px 0 3px 0 rgba(0, 0, 0, 0.5); }
+      scale.vertical > trough:disabled {
+        box-shadow: inset 2px 0 3px 0 rgba(0, 0, 0, 0.35); }
+  scale > trough > highlight {
     border: none;
     border-radius: 4px;
     background-color: transparent; }
-    scale highlight:disabled {
+    scale > trough > highlight:disabled {
       background-color: transparent; }
-      scale highlight:disabled:backdrop {
+      scale > trough > highlight:disabled:backdrop {
         background-color: transparent; }
-    scale highlight:backdrop {
+    scale > trough > highlight:backdrop {
       background-color: transparent; }
-  scale.horizontal indicator {
-    min-height: 6px;
-    min-width: 1px; }
-  scale.horizontal.fine-tune indicator {
-    min-height: 3px; }
-  scale.vertical indicator {
-    min-height: 1px;
-    min-width: 6px; }
-  scale.vertical.fine-tune indicator {
-    min-width: 3px; }
-  scale.fine-tune.horizontal {
-    padding-top: 12px;
-    padding-bottom: 10px;
-    min-height: 14px; }
-  scale.fine-tune.vertical {
-    padding-left: 12px;
-    padding-right: 10px;
-    min-width: 14px; }
-  scale.fine-tune slider {
-    margin: -6px; }
-  scale.fine-tune fill, scale.fine-tune trough, scale.fine-tune highlight {
-    border-radius: 4px; }
-  scale.fine-tune marks.top {
-    margin-bottom: 8px;
-    margin-top: -13px; }
-  scale.fine-tune marks.bottom {
-    margin-top: 8px;
-    margin-bottom: -13px; }
-  scale.fine-tune marks.top {
-    margin-right: 8px;
-    margin-left: -13px; }
-  scale.fine-tune marks.bottom {
-    margin-left: 8px;
-    margin-right: -13px; }
-  scale slider {
-    min-height: 14px;
-    min-width: 14px;
+  scale > trough > slider {
+    min-width: 16px;
+    min-height: 16px;
     margin: -6px;
-    border: 1px solid #2563AE;
     border-radius: 100%;
+    border: 1px solid #2563AE;
+    border-left-color: #385f92;
+    border-right-color: #385f92;
+    border-bottom-color: #24416b;
     color: #000000;
     background-color: #295080;
-    background-image: linear-gradient(to bottom, #fff, #95b9df 50%, #689dd3 51%, #d0faff);
-    box-shadow: inset 3px 0 rgba(0, 0, 0, 0.1), inset -3px 0 rgba(0, 0, 0, 0.1); }
-    scale slider:disabled {
-      opacity: 0.7;
-      background-color: #e1e1e1;
-      -gtk-icon-shadow: none; }
-      scale slider:disabled:backdrop {
-        background-color: #e8e8e8;
-        -gtk-icon-shadow: none; }
-    scale slider:backdrop {
+    background-image: linear-gradient(to bottom, #fff, #95b9df 50%, #689dd3 51%, #d0faff); }
+    scale > trough > slider:disabled {
+      background-color: #e1e1e1; }
+      scale > trough > slider:disabled:backdrop {
+        background-color: #e8e8e8; }
+    scale > trough > slider:backdrop {
       color: #8C8C8C;
       background-color: #f2f2f2; }
-  scale value {
+  scale.fine-tune.horizontal {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    min-height: 16px; }
+  scale.fine-tune.vertical {
+    min-width: 16px; }
+  scale.fine-tune > trough,
+  scale.fine-tune > trough > fill,
+  scale.fine-tune > trough > highlight {
+    border-radius: 8px; }
+  scale.fine-tune > trough > slider {
+    margin: -3px; }
+  scale > value {
+    color: alpha(currentColor, 0.55);
+    font-feature-settings: "tnum"; }
+  scale > marks {
     color: alpha(currentColor, 0.55); }
-  scale marks {
-    color: alpha(currentColor, 0.55); }
-    scale marks.top {
-      margin-bottom: 6px;
-      margin-top: -12px; }
-    scale marks.bottom {
-      margin-top: 6px;
-      margin-bottom: -12px; }
-    scale marks.top {
-      margin-right: 6px;
-      margin-left: -12px; }
-    scale marks.bottom {
-      margin-left: 6px;
-      margin-right: -12px; }
+  scale.horizontal > marks.top {
+    margin-bottom: 6px; }
+  scale.horizontal > marks.bottom {
+    margin-top: 6px; }
+  scale.horizontal > marks indicator {
+    min-width: 1px;
+    min-height: 6px;
+    background-color: currentColor; }
+  scale.horizontal > value.left {
+    margin-right: 9px; }
+  scale.horizontal > value.right {
+    margin-left: 9px; }
+  scale.horizontal.fine-tune > marks.top {
+    margin-top: 3px; }
+  scale.horizontal.fine-tune > marks.bottom {
+    margin-bottom: 3px; }
+  scale.horizontal.fine-tune > marks indicator {
+    min-height: 3px; }
+  scale.vertical > marks.top {
+    margin-right: 6px; }
+  scale.vertical > marks.bottom {
+    margin-left: 6px; }
+  scale.vertical > marks indicator {
+    min-height: 1px;
+    min-width: 6px;
+    background-color: currentColor; }
+  scale.vertical > value.top {
+    margin-bottom: 9px; }
+  scale.vertical > value.bottom {
+    margin-top: 9px; }
+  scale.vertical.fine-tune > marks.top {
+    margin-left: 3px; }
+  scale.vertical.fine-tune > marks.bottom {
+    margin-right: 3px; }
+  scale.vertical.fine-tune > marks indicator {
+    min-height: 3px; }
 
 progressbar {
   font-size: smaller;
