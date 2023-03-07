@@ -1277,85 +1277,72 @@ notebook {
 
 scrollbar {
   border: none;
-  background-color: transparent; }
-  scrollbar trough {
-    border: none;
-    background-color: #FFFFFF;
-    box-shadow: inset 2px -2px 5px 1px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+  box-shadow: inset 2px -2px 5px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  /*
+  &.horizontal button {
+    &.down { -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+    &.up { -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+  }
+
+  &.vertical button {
+    &.down { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    &.up { -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+  }
+  */ }
+  scrollbar > range > trough > slider {
+    margin: 0px;
+    min-width: 13px;
+    min-height: 13px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    background-color: #bbbbbb;
+    background-size: 16px 16px, auto;
+    box-shadow: inset 1px 0 2px 0 rgba(0, 0, 0, 0.34), inset -1px 0 2px 0 rgba(0, 0, 0, 0.34); }
+    scrollbar > range > trough > slider:backdrop {
+      background-color: #d9d9d9; }
+  scrollbar.horizontal > range > trough > slider {
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.05), transparent), linear-gradient(to bottom, #e6f1ff 15%, #53a1ff 45%, #bcdaff 75%); }
+    scrollbar.horizontal > range > trough > slider:backdrop {
+      background-image: linear-gradient(to bottom, #FFFFFF 15%, #EDEDED 40%, #FFFFFF 75%); }
+  scrollbar.vertical > range > trough > slider {
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05), transparent), linear-gradient(to right, #e6f1ff 15%, #53a1ff 45%, #bcdaff 75%); }
+    scrollbar.vertical > range > trough > slider:backdrop {
+      background-image: linear-gradient(to right, #FFFFFF 15%, #EDEDED 40%, #FFFFFF 75%); }
+  scrollbar.horizontal > range > trough > slider {
+    min-width: 40px; }
+  scrollbar.vertical > range > trough > slider {
+    min-height: 40px; }
+  scrollbar > range.fine-tune > trough > slider {
+    min-width: 11px;
+    min-height: 11px;
     border-radius: 16px; }
+  scrollbar > range.fine-tune.horizontal > trough > slider {
+    margin-top: 1px;
+    margin-bottom: 1px; }
+  scrollbar > range.fine-tune.vertical > trough > slider {
+    margin-left: 1px;
+    margin-right: 1px; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
     border: none;
     opacity: 1;
-    margin: 0;
     background-color: transparent; }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering) > range > trough > slider {
+      margin: 0px;
+      opacity: 1.0; }
+    scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) > range > trough > slider {
+      min-width: 40px;
+      min-height: 13px; }
+    scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) > range > trough > slider {
+      min-width: 13px;
+      min-height: 40px; }
   scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
     opacity: 1; }
-  scrollbar.horizontal {
-    border-top: none; }
-    scrollbar.horizontal slider {
-      min-height: 13px;
-      min-width: 45px;
-      border-width: 2px;
-      border-color: transparent;
-      border-radius: 16px;
-      background-color: #bbbbbb;
-      background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.05), transparent), linear-gradient(to bottom, #e6f1ff 15%, #53a1ff 45%, #bcdaff 75%);
-      background-size: 16px 16px, auto;
-      box-shadow: inset 1px 0 2px 0 rgba(0, 0, 0, 0.34), inset -1px 0 2px 0 rgba(0, 0, 0, 0.34); }
-      scrollbar.horizontal slider:backdrop {
-        background-image: linear-gradient(to bottom, #FFFFFF 15%, #EDEDED 40%, #FFFFFF 75%); }
-    scrollbar.horizontal trough {
-      margin-right: -5px; }
-    scrollbar.horizontal button {
-      border: none;
-      padding: 0;
-      border-radius: 0;
-      color: transparent;
-      box-shadow: none;
-      min-height: 13px; }
-      scrollbar.horizontal button:backdrop {
-        color: transparent; }
-      scrollbar.horizontal button.down {
-        min-width: 15px;
-        background-image: url("assets/stepper-right.png"); }
-      scrollbar.horizontal button.up {
-        min-width: 20px;
-        background-image: url("assets/stepper-left.png"); }
-  scrollbar.vertical {
-    border-left: none; }
-    scrollbar.vertical slider {
-      min-height: 45px;
-      min-width: 13px;
-      padding: 0;
-      border-width: 2px;
-      border-color: transparent;
-      border-radius: 16px;
-      background-color: #bbbbbb;
-      background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05), transparent), linear-gradient(to right, #e6f1ff 15%, #53a1ff 45%, #bcdaff 75%);
-      background-size: 16px 16px, auto;
-      box-shadow: inset 1px 0 2px 0 rgba(0, 0, 0, 0.34), inset -1px 0 2px 0 rgba(0, 0, 0, 0.34); }
-      scrollbar.vertical slider:backdrop {
-        background-image: linear-gradient(to right, #FFFFFF 15%, #EDEDED 40%, #FFFFFF 75%); }
-    scrollbar.vertical trough {
-      margin-bottom: -5px; }
-    scrollbar.vertical button {
-      border: none;
-      padding: 0;
-      border-radius: 0;
-      color: transparent;
-      box-shadow: none;
-      min-width: 13px; }
-      scrollbar.vertical button:backdrop {
-        color: transparent; }
-      scrollbar.vertical button.down {
-        min-height: 16px;
-        background-image: url("assets/stepper-down.png"); }
-      scrollbar.vertical button.up {
-        min-height: 20px;
-        background-image: url("assets/stepper-up.png"); }
-  treeview ~ scrollbar.vertical {
-    border-top: 1px solid #d5d5d5;
-    margin-top: -1px; }
+
+treeview ~ scrollbar.vertical {
+  border-top: 1px solid #d5d5d5;
+  margin-top: -1px; }
 
 switch {
   font-weight: bold;
