@@ -607,41 +607,6 @@ button.suggested-action {
     color: #707070;
     background-image: linear-gradient(to bottom, #b6c7e0, #95b9df 32%, #689dd3 38%, #bae3f6); }
 
-modelbutton {
-  min-height: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border: none;
-  border-radius: 0px;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none; }
-  modelbutton:hover {
-    color: #FFFFFF;
-    background-color: #2563AE;
-    background-image: linear-gradient(to bottom, #3990f9, #1c75e1); }
-  modelbutton:selected {
-    color: #FFFFFF;
-    background-color: #2563AE;
-    background-image: linear-gradient(to bottom, #3990f9, #1c75e1); }
-  modelbutton:disabled {
-    color: #777777; }
-  modelbutton > image {
-    padding-right: 4px; }
-  modelbutton arrow {
-    background: none;
-    min-width: 16px;
-    min-height: 16px;
-    opacity: 0.3; }
-    modelbutton arrow:hover {
-      background: none; }
-    modelbutton arrow:disabled {
-      opacity: 0.15; }
-    modelbutton arrow.left {
-      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-    modelbutton arrow.right {
-      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
-
 button.link,
 link {
   color: #1D8ECE;
@@ -1122,7 +1087,7 @@ columnview.view > header > button, treeview.view > header > button, columnview.v
   columnview.view > header > button:last-child, treeview.view > header > button:last-child {
     border-right-style: none; }
 
-popover.background {
+popover.background, popover.background:backdrop {
   font: initial;
   background-color: transparent; }
 
@@ -1130,12 +1095,11 @@ popover > arrow,
 popover > contents {
   border: 1px solid #d5d5d5;
   color: #000000;
-  background-color: #EDEDED;
+  background-color: #FFFFFF;
   background-clip: padding-box;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
+  box-shadow: none; }
 
 popover > contents {
-  padding: 8px;
   border-radius: 4px; }
   popover > contents > list,
   popover > contents > .view,
@@ -1150,33 +1114,55 @@ popover > contents {
 magnifier {
   background-color: #FFFFFF; }
 
-popover.menu menu, popover.menu .menu {
-  margin: 4px;
-  padding: 4px 0px;
-  border-radius: 4px;
+popover.menu > contents {
+  min-width: 120px;
+  padding: 4px; }
+
+popover.menu box.inline-buttons {
+  padding: 0px 4px; }
+
+popover.menu modelbutton {
+  min-height: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 0px;
   border: none;
-  color: #000000;
-  background-color: #FFFFFF; }
-  popover.menu menu menuitem, popover.menu .menu menuitem {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  popover.menu modelbutton:hover, popover.menu modelbutton:selected {
+    color: #FFFFFF;
+    background-color: #2563AE;
+    background-image: linear-gradient(to bottom, #3990f9, #1c75e1); }
+  popover.menu modelbutton:disabled {
+    color: gray; }
+  popover.menu modelbutton > image {
+    padding-right: 4px; }
+  popover.menu modelbutton arrow {
+    background: none;
+    min-width: 16px;
     min-height: 16px;
-    min-width: 40px;
-    padding: 4px;
-    border: none;
-    border-radius: 0;
-    color: #000000;
-    background-color: #FFFFFF; }
-    popover.menu menu menuitem:hover, popover.menu .menu menuitem:hover {
-      color: #FFFFFF;
-      background-color: #2563AE;
-      background-image: linear-gradient(to bottom, #3990f9, #1c75e1); }
-    popover.menu menu menuitem:disabled, popover.menu .menu menuitem:disabled {
-      color: gray; }
-    popover.menu menu menuitem accelerator, popover.menu .menu menuitem accelerator {
-      color: alpha(currentColor, 0.55); }
-      popover.menu menu menuitem accelerator:hover, popover.menu .menu menuitem accelerator:hover {
-        color: rgba(255, 255, 255, 0.8); }
-      popover.menu menu menuitem accelerator:disabled, popover.menu .menu menuitem accelerator:disabled {
-        color: gray; }
+    opacity: 0.3; }
+    popover.menu modelbutton arrow:hover {
+      background: none; }
+    popover.menu modelbutton arrow:disabled {
+      opacity: 0.15; }
+    popover.menu modelbutton arrow.left {
+      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
+    popover.menu modelbutton arrow.right {
+      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
+
+popover.menu separator {
+  margin: 6px 0; }
+
+popover.menu list separator {
+  margin: 0; }
+
+popover.menu popover.menu {
+  padding: 0 0 4px 0; }
+  popover.menu popover.menu > contents {
+    margin: 0;
+    border-radius: 4px; }
 
 popover.menu accelerator {
   color: alpha(currentColor, 0.55); }
@@ -1949,34 +1935,36 @@ calendar {
   calendar > grid > label.day-number.other-month {
     color: alpha(currentColor, 0.3); }
 
-window.dialog.message {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-  window.dialog.message .titlebar {
-    min-height: 20px;
-    background-image: none;
-    background-color: #EDEDED;
-    border-style: none;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px; }
-  window.dialog.message box.dialog-vbox.vertical {
-    border-spacing: 10px; }
-  window.dialog.message label.title {
-    font-weight: 800;
-    font-size: 15pt; }
-  window.dialog.message.csd.background {
-    border-bottom-left-radius: 4px;
+window.dialog.message .titlebar {
+  min-height: 20px;
+  background-image: none;
+  background-color: #EDEDED;
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+window.dialog.message box.dialog-vbox.vertical {
+  border-spacing: 10px; }
+
+window.dialog.message label.title {
+  font-weight: 800;
+  font-size: 15pt; }
+
+window.dialog.message.csd.background {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+window.dialog.message.csd .dialog-action-area button {
+  padding: 10px 14px;
+  border-radius: 0px;
+  border-left-style: solid;
+  border-right-style: none;
+  border-bottom-style: none; }
+  window.dialog.message.csd .dialog-action-area button:first-child {
+    border-left-style: none;
+    border-bottom-left-radius: 4px; }
+  window.dialog.message.csd .dialog-action-area button:last-child {
     border-bottom-right-radius: 4px; }
-  window.dialog.message.csd .dialog-action-area button {
-    padding: 10px 14px;
-    border-radius: 0px;
-    border-left-style: solid;
-    border-right-style: none;
-    border-bottom-style: none; }
-    window.dialog.message.csd .dialog-action-area button:first-child {
-      border-left-style: none;
-      border-bottom-left-radius: 4px; }
-    window.dialog.message.csd .dialog-action-area button:last-child {
-      border-bottom-right-radius: 4px; }
 
 .sidebar {
   background-color: #E2E5EC; }
